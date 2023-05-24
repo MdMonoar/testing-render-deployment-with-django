@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path("hello_heroku/", include("hello_heroku.urls")),
     path('admin/', admin.site.urls),
+    # path("hello_heroku/", include("hello_heroku.urls")), # this shows at http://127.0.0.1:8000/hello_heroku
+    path('', include("hello_heroku.urls")), # this shows at http://127.0.0.1:8000/
 ]
